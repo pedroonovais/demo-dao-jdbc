@@ -33,10 +33,15 @@ public class Program {
 		System.out.println("Inserted! New Id = " + newSeller.getId());
 		
 		System.out.println("\n=== TEST 5: seller update ===");
-		seller = sellerDao.findById(10);
+		seller = sellerDao.findById(11);
 		seller.setBaseSalary(88888.0);
 		sellerDao.update(seller);
 		System.out.println("Done! Updated id = " + seller.getId());
+		
+		System.out.println("\n=== TEST 6: seller delete ===");
+		int idDelete = sellerDao.findById(10).getId();
+		sellerDao.deleteById(20);
+		System.out.println("Done! Id deleted = " + idDelete);
 	}
 
 }
