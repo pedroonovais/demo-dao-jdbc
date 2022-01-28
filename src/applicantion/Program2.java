@@ -24,6 +24,11 @@ public class Program2 {
 		Department newDep = new Department(null, "Food");
 		//depDao.insert(newDep);
 		System.out.println("Done! Id = " + newDep.getId() + " inserted!");
+		
+		System.out.println("\n=== TEST 4: department update ===");
+		dep.setName("FixComputers");
+		depDao.update(dep);
+		System.out.println("Done! Id = " + dep.getId() + " Updated!");
 	}
 
 }
