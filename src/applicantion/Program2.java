@@ -29,6 +29,10 @@ public class Program2 {
 		dep.setName("FixComputers");
 		depDao.update(dep);
 		System.out.println("Done! Id = " + dep.getId() + " Updated!");
+		
+		System.out.println("\n=== TEST 5: department delete ===");
+		depDao.deleteById(8);
+		System.out.println("Deleted!");
 	}
 
 }
